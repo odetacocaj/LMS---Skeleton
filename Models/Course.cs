@@ -28,7 +28,7 @@ namespace LearningEnvironment2.Models
         public Faculty Faculty { get; set; }
 
         //Professor
-        //Faculty
+      
         public int ProfessorId { get; set; }
         [ForeignKey("ProfessorId")]
         public Professor Professor { get; set; }

@@ -59,7 +59,7 @@ namespace LearningEnvironment2
 
             //Seed database 
 
-            //AppDbInitializer.Seed(app);
+            AppDbInitializer.Seed(app);
         }
     }
 }
