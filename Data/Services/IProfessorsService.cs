@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace LearningEnvironment2.Data.Services
 {
-    public interface IStudentsService:IEntityBaseRepository<Student>
+    public interface IProfessorsService:IEntityBaseRepository<Professor>
     {
-      
-
     }
 }

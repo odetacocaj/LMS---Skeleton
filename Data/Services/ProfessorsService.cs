@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace LearningEnvironment2.Data.Services
 {
-    public interface IStudentsService:IEntityBaseRepository<Student>
+    public class ProfessorsService:EntityBaseRepository<Professor>,IProfessorsService
     {
-      
+        public ProfessorsService(AppDbContext context) : base(context)
+        {
 
+        }
     }
 }

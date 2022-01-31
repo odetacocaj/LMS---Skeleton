@@ -1,0 +1,83 @@
+﻿@model Professor
+
+@{
+    ViewData["Title"] = "Add a new professor";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Add a new Professor</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group text-center">
+                        <img id="ProfilePicturePreview" class="border-info rounded-circle" style="max-width: 150px" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Image" class="control-label"></label>
+                        <input asp-for="Image" class="form-control" />
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="LastName" class="control-label"></label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="AcademicGrade" class="control-label"></label>
+                        <input asp-for="AcademicGrade" class="form-control" />
+                        <span asp-validation-for="AcademicGrade" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="FieldOfStudy" class="control-label"></label>
+                        <input asp-for="FieldOfStudy" class="form-control" />
+                        <span asp-validation-for="FieldOfStudy" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Specialization" class="control-label"></label>
+                        <input asp-for="Specialization" class="form-control" />
+                        <span asp-validation-for="Specialization" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="Index"> Show All</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            var output = document.getElementById('ProfilePicturePreview');
+            output.src = $("#ProfilePictureURL").val();
+        })
+        $("#ProfilePictureURL").on("change", function () {
+            var output = document.getElementById('ProfilePicturePreview');
+            output.src = $(this).val();
+        })
+    </script>
+}
