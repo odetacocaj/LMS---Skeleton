@@ -16,7 +16,7 @@ namespace LearningEnvironment2.Data
             {
                 var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
                 context.Database.EnsureCreated();
-                //Faculty
+                ////Faculty
                 if (!context.Faculties.Any())
                 {
                     context.Faculties.AddRange(new List<Faculty>()
@@ -70,7 +70,7 @@ namespace LearningEnvironment2.Data
                             Description = "This is the description of the first Course",
                             ECTS = 5,
                             FacultyId=1,
-                            ProfessorId=2
+                            ProfessorId=10
                         },
                         new Course()
                         {
@@ -79,7 +79,7 @@ namespace LearningEnvironment2.Data
                             Description = "This is the description of the first Course",
                             ECTS = 6,
                             FacultyId=1,
-                            ProfessorId=3
+                            ProfessorId=9
                         },
                         new Course()
                         {
@@ -88,7 +88,7 @@ namespace LearningEnvironment2.Data
                             Description = "This is the description of the first Course",
                             ECTS = 4,
                             FacultyId=2,
-                            ProfessorId=1
+                            ProfessorId=8
                         },
                         new Course()
                         {
@@ -97,7 +97,7 @@ namespace LearningEnvironment2.Data
                             Description = "This is the description of the first Course",
                             ECTS = 4,
                             FacultyId=5,
-                            ProfessorId=4
+                            ProfessorId=7
                         },
                         new Course()
                         {
@@ -106,49 +106,49 @@ namespace LearningEnvironment2.Data
                             Description = "This is the description of the first Course",
                             ECTS = 6,
                             FacultyId=5,
-                            ProfessorId=5
+                            ProfessorId=6
                         },
                     });
                     context.SaveChanges();
                 }
 
-                //Course_Students
+                ////Course_Students
                 if (!context.Course_Students.Any())
                 {
                     context.Course_Students.AddRange(new List<Course_Student>()
                     {
                         new Course_Student()
                         {
-                            CourseId=11,
+                            CourseId=20,
                             StudentId=1,
 
 
                         },
                         new Course_Student()
                         {
-                            CourseId = 13,
+                            CourseId = 21,
                             StudentId = 1
                         },
 
                          new Course_Student()
                         {
-                            CourseId = 11,
+                            CourseId = 22,
                             StudentId = 2
                         },
                          new Course_Student()
                         {
-                            CourseId = 14,
+                            CourseId = 24,
                             StudentId = 2
                         },
 
                         new Course_Student()
                         {
-                            CourseId = 10,
+                            CourseId = 23,
                             StudentId = 3
                         },
                         new Course_Student()
                         {
-                            CourseId = 12,
+                            CourseId = 20,
                             StudentId = 3
                         },
 
@@ -213,7 +213,7 @@ namespace LearningEnvironment2.Data
                     context.SaveChanges();
                 }
 
-                ////Professors
+                //Professors
                 if (!context.Professors.Any())
                 {
                     context.Professors.AddRange(new List<Professor>()
@@ -225,7 +225,8 @@ namespace LearningEnvironment2.Data
                             Email="p@gmail.com",
                             AcademicGrade="Doctor Of Science",
                             FieldOfStudy="Mathematics",
-                            Specialization="Algebra"
+                            Specialization="Algebra",
+                            Image="http://dotnethow.net/images/actors/actor-1.jpeg"
 
                         },
                         new Professor()
@@ -235,7 +236,8 @@ namespace LearningEnvironment2.Data
                             Email="nick@gmail.com",
                             AcademicGrade="MBA",
                             FieldOfStudy="Economics",
-                            Specialization="Macroeconomy"
+                            Specialization="Macroeconomy",
+                            Image="http://dotnethow.net/images/actors/actor-2.jpeg"
                         },
                         new Professor()
                         {
@@ -244,7 +246,8 @@ namespace LearningEnvironment2.Data
                             Email="ana@gmail.com",
                             AcademicGrade="Master",
                             FieldOfStudy="Computer Science",
-                            Specialization="Networks"
+                            Specialization="Networks",
+                            Image="http://dotnethow.net/images/actors/actor-3.jpeg"
                         },
                         new Professor()
                         {
@@ -253,7 +256,8 @@ namespace LearningEnvironment2.Data
                             Email="b.white@gmail.com",
                             AcademicGrade="PhD",
                             FieldOfStudy="Art",
-                            Specialization="Abstract Art"
+                            Specialization="Abstract Art",
+                            Image="http://dotnethow.net/images/actors/actor-4.jpeg"
                         },
                         new Professor()
                         {
@@ -262,13 +266,14 @@ namespace LearningEnvironment2.Data
                             Email="will@gmail.com",
                             AcademicGrade="Master",
                             FieldOfStudy="Mathematics",
-                            Specialization="Arithmetics"
+                            Specialization="Arithmetics",
+                            Image="http://dotnethow.net/images/actors/actor-5.jpeg"
                         }
                     });
                     context.SaveChanges();
                 }
 
-                ////Admins
+                //Admins
 
                 if (!context.Admins.Any())
                 {

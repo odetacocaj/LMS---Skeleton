@@ -19,7 +19,7 @@ namespace LearningEnvironment2.Controllers
         public async Task<IActionResult> Index()
         {
             var allCourses = await _context.Courses.ToListAsync();
-            return View();
+            return View(allCourses);
         }
     }
 }
