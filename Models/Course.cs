@@ -12,11 +12,19 @@ namespace LearningEnvironment2.Models
         [Key]
         public int Id { get; set; }
 
+        [Display(Name = "Name")]
+
         public string Name { get; set; }
+
+        [Display(Name = "Description")]
 
         public string Description { get; set; }
 
+        [Display(Name = "ECTS")]
+
         public int ECTS { get; set; }
+
+        [Display(Name = "Cover Photo")]
 
         public string ImageURL { get; set; }
         //Relationships

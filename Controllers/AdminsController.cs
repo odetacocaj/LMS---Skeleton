@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace LearningEnvironment2.Controllers
 {
-    public class CoursesController : Controller
+    public class AdminsController : Controller
     {
         private readonly AppDbContext _context;
 
-        public CoursesController(AppDbContext context)
+        public AdminsController(AppDbContext context)
         {
             _context = context;
         }
         public async Task<IActionResult> Index()
         {
-            var allCourses = await _context.Courses.Include(n=>n.Faculty).OrderBy(n => n.Name).ToListAsync();
-            return View(allCourses);
+            var allAdmins = await _context.Admins.ToListAsync();
+            return View(allAdmins);
         }
     }
 }

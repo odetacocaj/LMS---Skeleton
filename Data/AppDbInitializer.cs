@@ -66,7 +66,7 @@ namespace LearningEnvironment2.Data
                         new Course()
                         {
                             Name = "Course 1",
-                            ImageURL = "http://dotnethow.net/images/Cinema/Cinema-1.jpeg",
+                            ImageURL = "https://www.21clhk.org/wp-content/uploads/2020/12/Creativity-in-Mathematics.png",
                             Description = "This is the description of the first Course",
                             ECTS = 5,
                             FacultyId=1,
@@ -75,7 +75,7 @@ namespace LearningEnvironment2.Data
                         new Course()
                         {
                             Name = "Course 2",
-                            ImageURL = "http://dotnethow.net/images/Cinema/Cinema-2.jpeg",
+                            ImageURL = "https://i.imgur.com/t4l5aLX.jpg",
                             Description = "This is the description of the first Course",
                             ECTS = 6,
                             FacultyId=1,
@@ -84,7 +84,7 @@ namespace LearningEnvironment2.Data
                         new Course()
                         {
                             Name = "Course 3",
-                            ImageURL = "http://dotnethow.net/images/Cinema/Cinema-3.jpeg",
+                            ImageURL = "http://online.hbs.edu/Style%20Library/api/resize.aspx?imgpath=/PublishingImages/Money_Graph.jpg&w=1200&h=630",
                             Description = "This is the description of the first Course",
                             ECTS = 4,
                             FacultyId=2,
@@ -93,7 +93,7 @@ namespace LearningEnvironment2.Data
                         new Course()
                         {
                             Name = "Course 4",
-                            ImageURL = "http://dotnethow.net/images/Cinema/Cinema-4.jpeg",
+                            ImageURL = "https://media.istockphoto.com/vectors/math-theory-mathematics-calculus-on-class-chalkboard-algebra-and-vector-id1265965042?k=20&m=1265965042&s=612x612&w=0&h=gxerbJWXamMUhILt59B7DlQlleffNvPGWLFNRWWVEBI=",
                             Description = "This is the description of the first Course",
                             ECTS = 4,
                             FacultyId=5,
@@ -102,7 +102,7 @@ namespace LearningEnvironment2.Data
                         new Course()
                         {
                             Name = "Course 5",
-                            ImageURL = "http://dotnethow.net/images/Cinema/Cinema-5.jpeg",
+                            ImageURL = "https://study.com/cimages/course-image/computer-science-202-network-and-system-security_1030285_large.jpeg",
                             Description = "This is the description of the first Course",
                             ECTS = 6,
                             FacultyId=5,
