@@ -12,20 +12,37 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">LearningEnvironment2</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Courses" asp-action="Index">LearningEnvironment2</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <li class="navbar-nav flex-grow-1">
+                            <a class="nav-link text-dark" asp-controller="Courses" asp-action="Index"> <i class="bi bi-book"></i>Courses</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bi-book bi-gear"></i> Management
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Faculties" asp-action="Index"><i class="bi-book bi-building"></i> Faculties</a>
+                                <a class="dropdown-item" asp-controller="Professors" asp-action="Index"><i class="bi-book bi-person-badge"></i> Professors</a>
+                                <a class="dropdown-item" asp-controller="Students" asp-action="Index"><i class="bi-book bi-eyeglasses"></i> Students</a>
+                                <a class="dropdown-item" asp-controller="Admins" asp-action="Index"><i class="bi-book person"></i> Admins</a>
+                            </div>
                         </li>
+
                     </ul>
+
+                    <form class="form-inline my-2 my-lg-0" asp-controller="Courses" asp-action="Filter" style="padding-right: 25px;">
+                        <input name="searchString" type="text" class="form-control" placeholder="Search for a course..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+
                 </div>
             </div>
         </nav>
@@ -38,7 +55,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - LearningEnvironment2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - LearningEnvironment2 - 
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

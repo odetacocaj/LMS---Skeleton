@@ -1,4 +1,5 @@
 ﻿using LearningEnvironment2.Data;
+using LearningEnvironment2.Data.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,15 +10,15 @@ namespace LearningEnvironment2.Controllers
 {
     public class StudentsController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IStudentsService _service;
 
-        public StudentsController(AppDbContext context)
+        public StudentsController(IStudentsService service)
         {
-            _context = context;
+            _service = service;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data=_context.Students.ToList();
+            var data = await _service.GetAll();
             return View(data);
         }
     }

@@ -1,4 +1,5 @@
 using LearningEnvironment2.Data;
+using LearningEnvironment2.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,7 +28,16 @@ namespace LearningEnvironment2
         {
             //DbContext Configuration
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+
+            //Services configuration
+
+            services.AddScoped<IStudentsService, StudentsService>();
+
             services.AddControllersWithViews();
+
+           
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
