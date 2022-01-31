@@ -18,7 +18,7 @@ namespace LearningEnvironment2.Controllers
         public IActionResult Index()
         {
             var data=_context.Students.ToList();
-            return View();
+            return View(data);
         }
     }
 }
