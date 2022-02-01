@@ -47,7 +47,7 @@ namespace LearningEnvironment2.Migrations
 
             modelBuilder.Entity("LearningEnvironment2.Models.Course", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);

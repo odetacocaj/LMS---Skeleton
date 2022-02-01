@@ -47,5 +47,43 @@ namespace LearningEnvironment2.Controllers
             await _service.AddAsync(professor);
             return RedirectToAction(nameof(Index));
         }
+
+        //GET : professors/edit/1
+        public async Task<IActionResult> Edit(int id)
+        {
+            var professorDetails = await _service.GetByIdAsync(id);
+            if (professorDetails == null) return View("NotFound");
+            return View(professorDetails);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id,[Bind("Id,Name,LastName,Email,AcademicGrade,FieldOfStudy,Specialization,Image")] Professor professor)
+        {
+            if (!ModelState.IsValid) return View(professor);
+
+            if (id == professor.id) { 
+           
+            await _service.UpdateAsync(id,professor);
+            return RedirectToAction(nameof(Index));
+            }
+            return View(professor);
+        }
+        //GET : professors/delete/1
+        public async Task<IActionResult> Delete(int id)
+        {
+            var professorDetails = await _service.GetByIdAsync(id);
+            if (professorDetails == null) return View("NotFound");
+            return View(professorDetails);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id) {
+
+            var professorDetails = await _service.GetByIdAsync(id);
+            if (professorDetails == null) return View("NotFound");
+
+            await _service.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

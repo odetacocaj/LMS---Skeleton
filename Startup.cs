@@ -33,6 +33,8 @@ namespace LearningEnvironment2
 
             services.AddScoped<IStudentsService, StudentsService>();
             services.AddScoped<IProfessorsService,ProfessorsService>();
+            services.AddScoped<IFacultiesService, FacultiesService>();
+            services.AddScoped<IAdminsService, AdminsService>();
 
             services.AddControllersWithViews();
 

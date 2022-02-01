@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningEnvironment2.Data.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace LearningEnvironment2.Models
 {
-    public class Course
+    public class Course: IEntityBase
     {
         [Key]
-        public int Id { get; set; }
+       // [Column("id")]
+        public int id { get; set; }
 
         [Display(Name = "Name")]
 

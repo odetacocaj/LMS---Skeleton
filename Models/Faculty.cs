@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningEnvironment2.Data.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LearningEnvironment2.Models
 {
-    public class Faculty
+    public class Faculty:IEntityBase
 
     {
         public int id { get; set; }
@@ -14,6 +15,7 @@ namespace LearningEnvironment2.Models
         public string Name { get; set; }
 
         [Display(Name = "Telephone Number")]
+        
         public int Telephone { get; set; }
 
         [Display(Name = "Office Email")]

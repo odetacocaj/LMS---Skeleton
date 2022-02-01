@@ -12,7 +12,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    
+                   
                     <th>
                         @Html.DisplayNameFor(model => model.Name)
                     </th>
@@ -32,7 +32,7 @@
                 @foreach (var item in Model)
                 {
                     <tr class="text-center">
-                      
+                        
                         <td class="align-middle">
                             @Html.DisplayFor(modelItem => item.Name)
                         </td>
@@ -44,9 +44,9 @@
                         </td>
                        
                         <td class="align-middle">
-                            <a class="btn btn-primary text-white"><i class="bi bi-pencil-square"></i>Edit</a> |
-                            <a class="btn btn-info text-white"><i class="bi bi-eye"></i>Details</a> |
-                            <a class="btn btn-danger text-white"><i class="bi bi-trash"></i>Delete</a>
+                            <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.id"><i class="bi bi-pencil-square"></i>Edit</a> |
+                            <a class="btn btn-info text-white" asp-action="Details" asp-route-id="@item.id"><i class="bi bi-eye"></i>Details</a> |
+                            <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.id"><i class="bi bi-trash"></i>Delete</a>
 
                         </td>
                     </tr>
@@ -56,5 +56,7 @@
         </table>
     </div>
 </div>
-
+<div style="position:fixed; right:25px; bottom:50px;" class="text-white">
+    <a asp-controller="Faculties" asp-action="Create" class="btn btn-success"><i class="bi bi-plus-circle"></i> Add New</a>
+</div>
 
