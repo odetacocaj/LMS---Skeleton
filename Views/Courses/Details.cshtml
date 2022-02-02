@@ -1,0 +1,91 @@
+﻿
+
+@model Course
+
+@{
+    ViewData["Title"] = "Course Details";
+
+}
+
+<div class="row">
+   
+        <div class="col-md-8  offset-2">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-header text-white bg-info">
+                            <p class="card-text">
+                                <h5 class="card-title">
+                                    @Model.Name
+                                   
+                                </h5>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="@Model.ImageURL" height="100%" width="100%" alt="@Model.Name">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text"> @Model.Description</p>
+                            <p class="card-text">
+                                <b>Faculty: </b>
+                                <a asp-controller="Faculties" asp-action="Details" asp-route-id="@Model.FacultyId">@Model.Faculty.Name</a>
+                            </p>
+                            <p class="card-text">
+                                <b>Lecturer: </b>
+                                <a asp-controller="Professors" asp-action="Details" asp-route-id="@Model.ProfessorId">@Model.Professor.Name @Model.Professor.LastName</a>
+                                <br/>
+                                <img class="border-info rounded-circle" src="@Model.Professor.Image" style="max-width:50px"/>
+                            </p> 
+                            <p class="card-text"><b>ECTS </b>@Model.ECTS</p>
+                            <p class="card-text ">
+                                <b>Status: </b>
+                                @if (Model.ECTS > 4)
+                                {
+                                    <span class="badge bg-success text-white">Mandatory Course</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-primary text-white">Optional Course</span>
+                                }
+
+                            </p>
+                            <p class="card-text">
+                                <b> Other students in this Course : </b>
+                                <hr/>
+                                <div class="row">
+                                    @foreach (var student in Model.Course_Student)
+                                    {
+                                        <div class="column text-center">
+                                            <a asp-controller="Students" asp-action="Details" asp-route-id="@student.StudentId">  @student.Student.Name @student.Student.LastName | </a>
+                                        </div>
+                                    }
+                                </div>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-footer ">
+                            <p class="card-text">
+                                <a class="btn btn-outline-primary float-right" asp-action="Index">
+                                    Back to List
+                                </a>
+                                <a class="btn btn-success text-white">
+
+                                    <i class="bi bi-key"></i> Enroll To Course
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    
+</div>
+
+

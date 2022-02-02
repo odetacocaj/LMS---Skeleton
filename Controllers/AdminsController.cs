@@ -31,7 +31,7 @@ namespace LearningEnvironment2.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("Name,LastName,Email,Certification,Image")] Admin admin)
+        public async Task<IActionResult> Create([Bind("Name,LastName,Email,Certifications,Image")] Admin admin)
         {
             if (!ModelState.IsValid)
             {
@@ -61,7 +61,7 @@ namespace LearningEnvironment2.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("id,Name,LastName,Email,Certification,Image")] Admin admin)
+        public async Task<IActionResult> Edit(int id, [Bind("id,Name,LastName,Email,Certifications,Image")] Admin admin)
         {
             if (!ModelState.IsValid)
             {

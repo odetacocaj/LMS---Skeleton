@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace LearningEnvironment2.Models
 {
-    public class Course : IEntityBase
+    public class NewCourseVM 
     {
-        [Key]
-       [Column("Id")]
+
         public int id { get; set; }
 
         [Display(Name = "Name")]
@@ -30,18 +29,21 @@ namespace LearningEnvironment2.Models
 
         public string ImageURL { get; set; }
         //Relationships
-        public List<Course_Student> Course_Student { get; set; }
+
+
+        public List<int> StudentIds { get; set; }
 
         //Faculty
+        [Display(Name = "Select a Faculty")]
+        [Required(ErrorMessage ="Faculty is required!")]
         public int FacultyId { get; set; }
-        [ForeignKey("FacultyId")]
-        public Faculty Faculty { get; set; }
 
-        //Professor
-      
+        [Display(Name = "Select a lecturer")]
+        [Required(ErrorMessage = "Lecturer/Professor is required!")]
+
+
         public int ProfessorId { get; set; }
-        [ForeignKey("ProfessorId")]
-        public Professor Professor { get; set; }
+       
 
 
     }
