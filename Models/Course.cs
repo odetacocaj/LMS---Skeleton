@@ -11,7 +11,7 @@ namespace LearningEnvironment2.Models
     public class Course : IEntityBase
     {
         [Key]
-       [Column("Id")]
+       [Column("id")]
         public int id { get; set; }
 
         [Display(Name = "Name")]

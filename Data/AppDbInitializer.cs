@@ -58,104 +58,104 @@ namespace LearningEnvironment2.Data
                 }
 
 
-                //Course
-                if (!context.Courses.Any())
-                {
-                    context.Courses.AddRange(new List<Course>()
-                    {
-                        new Course()
-                        {
-                            Name = "Course 1",
-                            ImageURL = "https://www.21clhk.org/wp-content/uploads/2020/12/Creativity-in-Mathematics.png",
-                            Description = "This is the description of the first Course",
-                            ECTS = 5,
-                            FacultyId=1,
-                            ProfessorId=10
-                        },
-                        new Course()
-                        {
-                            Name = "Course 2",
-                            ImageURL = "https://i.imgur.com/t4l5aLX.jpg",
-                            Description = "This is the description of the first Course",
-                            ECTS = 6,
-                            FacultyId=1,
-                            ProfessorId=9
-                        },
-                        new Course()
-                        {
-                            Name = "Course 3",
-                            ImageURL = "http://online.hbs.edu/Style%20Library/api/resize.aspx?imgpath=/PublishingImages/Money_Graph.jpg&w=1200&h=630",
-                            Description = "This is the description of the first Course",
-                            ECTS = 4,
-                            FacultyId=2,
-                            ProfessorId=8
-                        },
-                        new Course()
-                        {
-                            Name = "Course 4",
-                            ImageURL = "https://media.istockphoto.com/vectors/math-theory-mathematics-calculus-on-class-chalkboard-algebra-and-vector-id1265965042?k=20&m=1265965042&s=612x612&w=0&h=gxerbJWXamMUhILt59B7DlQlleffNvPGWLFNRWWVEBI=",
-                            Description = "This is the description of the first Course",
-                            ECTS = 4,
-                            FacultyId=5,
-                            ProfessorId=7
-                        },
-                        new Course()
-                        {
-                            Name = "Course 5",
-                            ImageURL = "https://study.com/cimages/course-image/computer-science-202-network-and-system-security_1030285_large.jpeg",
-                            Description = "This is the description of the first Course",
-                            ECTS = 6,
-                            FacultyId=5,
-                            ProfessorId=6
-                        },
-                    });
-                    context.SaveChanges();
-                }
+                ////Course
+                //if (!context.Courses.Any())
+                //{
+                //    context.Courses.AddRange(new List<Course>()
+                //    {
+                //        new Course()
+                //        {
+                //            Name = "Course 1",
+                //            ImageURL = "https://www.21clhk.org/wp-content/uploads/2020/12/Creativity-in-Mathematics.png",
+                //            Description = "This is the description of the first Course",
+                //            ECTS = 5,
+                //            FacultyId=1,
+                //            ProfessorId=10
+                //        },
+                //        new Course()
+                //        {
+                //            Name = "Course 2",
+                //            ImageURL = "https://i.imgur.com/t4l5aLX.jpg",
+                //            Description = "This is the description of the first Course",
+                //            ECTS = 6,
+                //            FacultyId=1,
+                //            ProfessorId=9
+                //        },
+                //        new Course()
+                //        {
+                //            Name = "Course 3",
+                //            ImageURL = "http://online.hbs.edu/Style%20Library/api/resize.aspx?imgpath=/PublishingImages/Money_Graph.jpg&w=1200&h=630",
+                //            Description = "This is the description of the first Course",
+                //            ECTS = 4,
+                //            FacultyId=2,
+                //            ProfessorId=8
+                //        },
+                //        new Course()
+                //        {
+                //            Name = "Course 4",
+                //            ImageURL = "https://media.istockphoto.com/vectors/math-theory-mathematics-calculus-on-class-chalkboard-algebra-and-vector-id1265965042?k=20&m=1265965042&s=612x612&w=0&h=gxerbJWXamMUhILt59B7DlQlleffNvPGWLFNRWWVEBI=",
+                //            Description = "This is the description of the first Course",
+                //            ECTS = 4,
+                //            FacultyId=5,
+                //            ProfessorId=7
+                //        },
+                //        new Course()
+                //        {
+                //            Name = "Course 5",
+                //            ImageURL = "https://study.com/cimages/course-image/computer-science-202-network-and-system-security_1030285_large.jpeg",
+                //            Description = "This is the description of the first Course",
+                //            ECTS = 6,
+                //            FacultyId=5,
+                //            ProfessorId=6
+                //        },
+                //    });
+                //    context.SaveChanges();
+                //}
 
-                ////Course_Students
-                if (!context.Course_Students.Any())
-                {
-                    context.Course_Students.AddRange(new List<Course_Student>()
-                    {
-                        new Course_Student()
-                        {
-                            CourseId=20,
-                            StudentId=1,
-
-
-                        },
-                        new Course_Student()
-                        {
-                            CourseId = 21,
-                            StudentId = 1
-                        },
-
-                         new Course_Student()
-                        {
-                            CourseId = 22,
-                            StudentId = 2
-                        },
-                         new Course_Student()
-                        {
-                            CourseId = 24,
-                            StudentId = 2
-                        },
-
-                        new Course_Student()
-                        {
-                            CourseId = 23,
-                            StudentId = 3
-                        },
-                        new Course_Student()
-                        {
-                            CourseId = 20,
-                            StudentId = 3
-                        },
+                //////Course_Students
+                //if (!context.Course_Students.Any())
+                //{
+                //    context.Course_Students.AddRange(new List<Course_Student>()
+                //    {
+                //        new Course_Student()
+                //        {
+                //            CourseId=20,
+                //            StudentId=1,
 
 
-                    });
-                    context.SaveChanges();
-                }
+                //        },
+                //        new Course_Student()
+                //        {
+                //            CourseId = 21,
+                //            StudentId = 1
+                //        },
+
+                //         new Course_Student()
+                //        {
+                //            CourseId = 22,
+                //            StudentId = 2
+                //        },
+                //         new Course_Student()
+                //        {
+                //            CourseId = 24,
+                //            StudentId = 2
+                //        },
+
+                //        new Course_Student()
+                //        {
+                //            CourseId = 23,
+                //            StudentId = 3
+                //        },
+                //        new Course_Student()
+                //        {
+                //            CourseId = 20,
+                //            StudentId = 3
+                //        },
+
+
+                //    });
+                //    context.SaveChanges();
+                //}
 
 
                 ////Students
