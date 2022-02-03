@@ -57,7 +57,7 @@ namespace LearningEnvironment2.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id,[Bind("Id,Name,LastName,Email,AcademicGrade,FieldOfStudy,Specialization,Image")] Professor professor)
+        public async Task<IActionResult> Edit(int id,[Bind("id,Name,LastName,Email,AcademicGrade,FieldOfStudy,Specialization,Image")] Professor professor)
         {
             if (!ModelState.IsValid) return View(professor);
 
