@@ -66,6 +66,28 @@ namespace LearningEnvironment2.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        //Edit
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var facultyDetails = await _service.GetByIdAsync(id);
+            if (facultyDetails == null) return View("NotFound");
+            return View(facultyDetails);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, [Bind("id,Name,Telephone,Email")] Faculty faculty)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(faculty);
+            }
+
+            await _service.UpdateAsync(id, faculty);
+            return RedirectToAction(nameof(Index));
+        }
+
+
         //Get: Faculties/Delete/1
 
         public async Task<IActionResult> Delete(int id)
